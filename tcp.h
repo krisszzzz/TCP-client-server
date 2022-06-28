@@ -36,15 +36,19 @@ enum CLI_ARGS_COUNT {
         USR_CLI_DEFAULT_IP_N_PORT = 2, /**< the value 2 is argument count passed through command line. If the
                                         * program work like a client, that it require 4 arguments (first 
                                         * argument - the executable name, second is flag to indetify, that 
-                                        * program working as client (--client), third - ip address, fourth -
+                                        * program working as a client (--client), third - ip address, fourth -
                                         * port. But last two arguments can be omitted. The default ip address
                                         * 127.0.0.1 (localhost), default port - 80. */
 
-        USR_CLI_DEFAULT_PORT      = 3, /**< 3 argument passed, the only missing one in port.
-                                        * Default port is 80. @see CLI_DEFAULT_IP_N_PORT */
-        USR_ALL_ARGS_PASSED       = 4, /**< 4 argument passed, including ip address and port number. @see CLI_DEFAULT_IP_N_PORT */
-        SERVER_CLI_DEFAULT_PORT   = 2,
-        SERVER_ALL_ARGS_PASSED    = 3
+        USR_CLI_DEFAULT_PORT      = 3, /**< 3 arguments passed, the only missing one in port.
+                                        * Default port is 80. @see USR_CLI_DEFAULT_IP_N_PORT */
+        USR_ALL_ARGS_PASSED       = 4, /**< 4 arguments passed, including ip address and port number. @see USR_CLI_DEFAULT_IP_N_PORT */
+        SERVER_CLI_DEFAULT_PORT   = 2, /**< 2 arguments passed. If the program work as a server, that it require 3 arguments:
+                                        *   first one is executable name, second is flag to indetify, that
+                                        *   program working as a server (--server), third - port number. But last one can be ommited.
+                                        *   The port will be set to default value - 80.
+                                        */
+        SERVER_ALL_ARGS_PASSED    = 3  /**< 3 arguments passed, including port number. @see SERVER_CLI_DEFAULT_PORT */
 };
 
 
